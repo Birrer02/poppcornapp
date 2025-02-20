@@ -11,6 +11,7 @@ dependencies:
   google_mobile_ads: ^3.0.0
   shared_preferences: ^2.2.2
   url_launcher: ^6.1.14
+  webview_flutter: ^4.9.0
 
 flutter:
   uses-material-design: true
