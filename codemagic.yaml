@@ -1,13 +1,26 @@
-workflows:
-  flutter-workflow:
-    name: Flutter APK Build
-    max_build_duration: 60
-    instance_type: mac_mini
-    environment:
-      flutter: stable
-    scripts:
-      - flutter pub cache repair
-      - flutter pub get
-      - flutter build apk --release
-    artifacts:
-      - build/app/outputs/flutter-apk/app-release.apk
+name: mining_app
+description: Eine einfache Mining-App mit AdMob und PayPal-Integration.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_mobile_ads: ^5.3.1
+  shared_preferences: ^2.5.3
+  url_launcher: ^6.3.1
+  webview_flutter: ^4.10.0
+  webview_flutter_android: ^4.3.2
+  webview_flutter_platform_interface: ^2.10.0
+  webview_flutter_wkwebview: ^3.18.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  test: any
+  mockito: any
+
+flutter:
+  uses-material-design: true
